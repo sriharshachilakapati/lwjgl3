@@ -13,7 +13,7 @@ import static org.lwjgl.system.MemoryUtil.*;
 import static org.lwjgl.system.libc.LibCString.*;
 
 /** Provides {@link MemoryAccessor} implementations. The most efficient available will be used by {@link MemoryUtil}. */
-final class MemoryAccess {
+public final class MemoryAccess {
 
 	static {
 		Library.initialize();
@@ -782,7 +782,7 @@ final class MemoryAccess {
 		));
 	}
 
-	static sun.misc.Unsafe getUnsafeInstance() {
+	public static sun.misc.Unsafe getUnsafeInstance() {
 		java.lang.reflect.Field[] fields = sun.misc.Unsafe.class.getDeclaredFields();
 
 			/*
